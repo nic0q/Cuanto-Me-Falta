@@ -1,0 +1,19 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+body{
+	margin: 200px;
+  }
+input{
+	background-color: #007BFF;
+	color: rgb(255, 255, 255);
+	border: 0;
+	width: 7rem;
+}
+::placeholder{
+	color: rgb(255, 255, 255);
+}
+#card{
+	display: inline-block;
+	margin: 10px;
+}
