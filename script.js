@@ -10,14 +10,15 @@ const $error = document.getElementById("error")
 const addCard = () =>{
   const ab = $card.cloneNode(true)
   ab.classList.toggle("d-none")
-  $cards.insertAdjacentElement("afterbegin",ab)
+  $cards.insertAdjacentElement("beforebegin",ab)
 }
 const deleteCard = () =>{
   try{
-    $cards.children[$cards.children.length-2].remove()
+    const len = document.querySelectorAll(".card").length-1
+    document.querySelectorAll(".card")[len-1].remove()
   }
   catch{
-    alert("Todo ya fue eliminado")
+    console.log("Todo eliminado")
   }
 }
 // Hacer el dnone con bootstrap para que tire un mensaje con toggle
@@ -25,6 +26,7 @@ const calculate = () =>{
   const pond = []
   const nota = []
   let i = 0
+  let res = 0
   for (let e of document.querySelectorAll("#pond")){
     pond[i] = e.value
     i+=1
@@ -34,7 +36,6 @@ const calculate = () =>{
     nota[i] = e.value
     i+=1
   }
-  let res = 0
   for(i = 0; i < pond.length-1;i++){
     res += parseFloat(pond[i]) * parseFloat(nota[i]) * 0.01
   }
@@ -48,7 +49,18 @@ const calculate = () =>{
     $error.classList.remove("d-none")
   }
   else{
-    if(res >= 3.96){
+
+    if(res === 0){
+      if(!$ap.classList.contains("d-none")){
+        $ap.classList.toggle("d-none")
+      }
+      if(!$error.classList.contains("d-none")){
+        $error.classList.toggle("d-none")
+      }
+      $des.classList.remove("d-none")
+      $des.innerHTML = `Ingrese alguna nota`
+    }
+    else if(res >= 3.96){
       if(!$des.classList.contains("d-none")){
         $des.classList.toggle("d-none")
       }
@@ -56,6 +68,7 @@ const calculate = () =>{
         $error.classList.toggle("d-none")
       }
       $ap.classList.remove("d-none")
+      $ap.innerHTML = `Su nota es ${res.toFixed(3)}`
     }
     else{
       if(!$ap.classList.contains("d-none")){
@@ -65,10 +78,9 @@ const calculate = () =>{
         $error.classList.toggle("d-none")
       }
       $des.classList.remove("d-none")
+      $des.innerHTML = `Su nota es ${res.toFixed(3)}`
     }
   }
-  console.log(res)
-
 }
 
 $add.onclick = addCard

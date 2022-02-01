@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="icon" href="https://www.seekpng.com/png/full/167-1677807_funny-question-mark-clip-art-blue-question-mark.png">
+    <title>¿Cuánto Me Falta? 🤔</title>
 </head>
 <body>
-    <h1>Cuanto me falta</h1>
+    <h1>¿Cuánto Me Falta? 🤔</h1>
+    <hr class="solid">
+    <h5>Instrucciones</h5>
+    <li style="text-indent:20px;">Genere una nueva tarjeta con Nueva Nota . . 🟦</li>
+    <li style="text-indent:20px;">Elimine una tarjeta con Eliminar Nota . . . .  . . 🟥</li>
+    <li style="text-indent:20px;">Una vez ingresadas todas, presione Calcular 🟩</li>
+    <br>
     <div class = "container">
         <div class = "buttons">
-            <button id = "button" type="button" class="btn btn-info">Nueva Evaluación</button>
-            <button id = "delete" type="button" class="btn btn-danger">Eliminar Evaluación</button>
+            <button id = "button" type="button" class="btn btn-info">Nueva Nota</button>
+            <button id = "delete" type="button" class="btn btn-danger">Eliminar Nota</button>
             <button id = "calculo" type="button" class="btn btn-success">Calcular</button>
         </div>
         <br>
+
     <div class="alert alert-warning d-none" id = "alert1" role="alert">
       A simple warning alert—check it out!
     </div>
+
     <section id = "cards">
     <div id ="card" class="card text-white bg-primary mb-1 d-none" style="max-width: 10rem;">
         <div class="card-body">
-            <input placeholder="Ponderación (%)" type="text" name="" id="pond">
+            <input placeholder="Ponderación [%]" type="text" name="" id="pond">
         </div>
         <div class="card-header">
           <input placeholder="Nota [1-7]" type="text" name="" id="nota">
@@ -34,14 +43,13 @@
     </div>
     <br>
     <div id = "aprobar" class="alert alert-success d-none" role="alert">
-      4 es nota, lo demás es lujo
     </div>
-    <div id = "error" class="alert alert-danger d-none" role="alert">
+    <div id = "error" class="alert alert-warning d-none" role="alert">
       Rellene todas las tarjetas | Ingrese solo numeros
     </div>
     <div id = "desaprobar"class="alert alert-danger d-none" role="alert">
-      Faltó poquito ;(
     </div>
-</body>
+    <div id = "footer">Made with ❤️ by <a href="https://github.com/nic0q" target="_blank">Nícolas</a></div>
+  </body>
 <script src = "script.js"></script>
 </html>
