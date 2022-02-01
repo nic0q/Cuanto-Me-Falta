@@ -11,17 +11,22 @@
 </head>
 <body>
     <h1>Cuanto me falta</h1>
-    <button id = "button" type="button" class="btn btn-info">Nueva Evaluación</button>
-    <button id = "calculo" type="button" class="btn btn-success">Calcular</button>
+    <div class = "container">
+        <div class = "buttons">
+            <button id = "button" type="button" class="btn btn-info">Nueva Evaluación</button>
+            <button id = "delete" type="button" class="btn btn-danger">Eliminar Evaluación</button>
+            <button id = "calculo" type="button" class="btn btn-success">Calcular</button>
+        </div>
+    <br><br>
     <section id = "cards">
     <div id ="card" class="card text-white bg-primary mb-1" style="max-width: 10rem;">
         <div class="card-header"><input placeholder="Nombre" type="text" name="" id=""></div>
         <div class="card-body">
-            <input placeholder="Ponderación" type="text" name="" id="">
+            <input placeholder="Ponderación" type="text" name="" id="input">
         </div>
       </div>
     </section>
-
+    </div>
 </body>
 <script src = "script.js"></script>
 </html>
