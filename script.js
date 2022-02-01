@@ -1,6 +1,7 @@
 const $add = document.getElementById("button")
 const $calc = document.getElementById("calculo")
 const $del = document.getElementById("delete")
+const $delAll = document.getElementById("deleteAll")
 const $card = document.getElementById("card")
 const $cards = document.getElementById("cards")
 const $ap = document.getElementById("aprobar")
@@ -14,8 +15,8 @@ const addCard = () =>{
 }
 const deleteCard = () =>{
   try{
-    const len = document.querySelectorAll(".card").length-1
-    document.querySelectorAll(".card")[len-1].remove()
+    const len = document.querySelectorAll(".card").length-2
+    document.querySelectorAll(".card")[len].remove()
   }
   catch{
     console.log("Todo eliminado")
@@ -49,7 +50,6 @@ const calculate = () =>{
     $error.classList.remove("d-none")
   }
   else{
-
     if(res === 0){
       if(!$ap.classList.contains("d-none")){
         $ap.classList.toggle("d-none")
@@ -82,7 +82,12 @@ const calculate = () =>{
     }
   }
 }
-
+const deleteAll = () =>{
+  document.querySelectorAll(".card").forEach(e =>{
+    e.remove()
+  })
+}
 $add.onclick = addCard
 $del.onclick = deleteCard 
 $calc.onclick = calculate
+$delAll.onclick = deleteAll

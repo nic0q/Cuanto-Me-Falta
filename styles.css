@@ -3,24 +3,28 @@
 }
 hr{
   background-color: rgb(255, 255, 255);
+  border-radius: 25px;
 }
 body{
   color: white;
 	background-color: rgb(17, 17, 20);
-	margin: 100px;
+	margin: 100px; 
   zoom: 180%;
 }
 .buttons{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
+
 button{
 	margin: 5px;
 }
 input{
 	background-color: #1187f6;
-  border:solid 0.05px rgb(0, 98, 255) ;
+  border:solid 0.05px rgb(0, 98, 255);
+  border-radius: 25px;
 	color: rgb(255, 255, 255);
 	width: 8rem;
   align-items: center;
@@ -38,8 +42,10 @@ input{
 #card{
 	display: inline-block;
 	margin-right: 3px;
+	border-radius: 10px;
 }
 .container{
+	border-radius: 25px;
 	background-color: rgb(32, 32, 32);
 	padding: 10px;
 	border: solid #1c1e20;
