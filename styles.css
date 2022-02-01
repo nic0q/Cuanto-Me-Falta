@@ -21,13 +21,17 @@ input{
 	color: rgb(255, 255, 255);
 	border: none;
 	width: 8rem;
+  align-items: center;
 }
 ::placeholder{
 	color: rgb(255, 255, 255);
 }
+.hide{
+  visibility: visible;
+}
 #card{
 	display: inline-block;
-	margin: 3px;
+	margin-right: 3px;
 }
 .container{
 	background-color: rgb(39, 39, 39);

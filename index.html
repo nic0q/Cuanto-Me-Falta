@@ -17,15 +17,30 @@
             <button id = "delete" type="button" class="btn btn-danger">Eliminar Evaluación</button>
             <button id = "calculo" type="button" class="btn btn-success">Calcular</button>
         </div>
-    <br><br>
+        <br>
+    <div class="alert alert-warning d-none" id = "alert1" role="alert">
+      A simple warning alert—check it out!
+    </div>
     <section id = "cards">
-    <div id ="card" class="card text-white bg-primary mb-1" style="max-width: 10rem;">
-        <div class="card-header"><input placeholder="Nombre" type="text" name="" id=""></div>
+    <div id ="card" class="card text-white bg-primary mb-1 d-none" style="max-width: 10rem;">
         <div class="card-body">
-            <input placeholder="Ponderación" type="text" name="" id="input">
+            <input placeholder="Ponderación (%)" type="text" name="" id="pond">
+        </div>
+        <div class="card-header">
+          <input placeholder="Nota [1-7]" type="text" name="" id="nota">
         </div>
       </div>
     </section>
+    </div>
+    <br>
+    <div id = "aprobar" class="alert alert-success d-none" role="alert">
+      4 es nota, lo demás es lujo
+    </div>
+    <div id = "error" class="alert alert-danger d-none" role="alert">
+      Rellene todas las tarjetas | Ingrese solo numeros
+    </div>
+    <div id = "desaprobar"class="alert alert-danger d-none" role="alert">
+      Faltó poquito ;(
     </div>
 </body>
 <script src = "script.js"></script>
