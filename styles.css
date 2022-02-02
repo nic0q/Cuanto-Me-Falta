@@ -44,12 +44,12 @@ input{
 	margin-right: 3px;
 	border-radius: 10px;
 }
+#footer{
+  position: fixed;
+}
 .container{
 	border-radius: 25px;
 	background-color: rgb(32, 32, 32);
 	padding: 10px;
 	border: solid #1c1e20;
-}
-#footer{
-  position: fixed;
 }
