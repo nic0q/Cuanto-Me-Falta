@@ -16,8 +16,8 @@
     <h5>Instrucciones</h5>
     <li style="text-indent:20px;">Genere una nueva tarjeta con Nueva Nota . . 🟦</li>
     <li style="text-indent:20px;">Elimine una tarjeta con Eliminar Nota . . . . . . 🟥</li>
-    <li style="text-indent:20px;">Una vez ingresadas todas, presione Calcular 🟩</li>
     <li style="text-indent:20px;">Para eliminar todas, presione Reset . . . . . . .  🟨</li>
+    <li style="text-indent:20px;">Una vez ingresadas todas, presione Calcular 🟩</li>
     <br>
     <div class = "container">
         <div class = "buttons">
@@ -30,10 +30,11 @@
     <section id = "cards">
     <div id ="card" class="card text-white bg-primary mb-1 d-none" style="max-width: 10rem;">
         <div class="card-body">
-            <input placeholder="Ponderación [%]" type="text" name="" id="pond">
+          <input class = "notRequired" placeholder="Nombre" type="text" id="nameNota">
+            <input class = "required" placeholder="Ponderación (%)" type="text" id="pond">
         </div>
         <div class="card-header">
-          <input placeholder="Nota [1-7]" type="text" name="" id="nota">
+          <input class = "required" placeholder="Nota (1-7)" type="text" id="nota">
         </div>
       </div>
     </section>

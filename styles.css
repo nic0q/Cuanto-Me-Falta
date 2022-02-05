@@ -32,8 +32,18 @@ input{
   text-align: center;
   font-weight:lighter;
 }
+.notRequired{
+	background-color: rgb(19, 114, 223);
+	margin-bottom: 3px;
+}
+#pond{
+	background-color: #3c74ec;
+}
+#nota{
+	background-color: #5686dd;
+}
 ::placeholder{
-	color: rgba(255, 255, 255, 0.548);
+	color: rgba(255, 255, 255, 0.527);
   text-align: center;
 }
 .hide{

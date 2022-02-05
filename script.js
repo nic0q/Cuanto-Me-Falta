@@ -82,7 +82,7 @@ const calculate = () =>{
         $error.classList.toggle("d-none")
       }
       $des.classList.remove("d-none")
-      $des.innerHTML = `Alguna nota es 0`
+      $des.innerHTML = `0`
     }
     else if(res < 0){
       if(!$error.classList.contains("d-none")){
